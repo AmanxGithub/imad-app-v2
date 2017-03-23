@@ -47,7 +47,7 @@ var htmptemplate=`
      </div>  
     </body>
 </html>`;
-retunr htmptemplet;
+return htmptemplet;
 }
 
 
