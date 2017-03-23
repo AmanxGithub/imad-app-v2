@@ -25,7 +25,7 @@ var htmltemplet=`
 <html>
      <head>
         <title>
-                $(title)
+              <script>  $(title) </script>
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
@@ -36,13 +36,13 @@ var htmltemplet=`
         </div>
         <hr/>
         <div>
-             $(date)
+            <script> $(date) </script>
         </div>
         <h3>
-            $(heaing)
+           <script> $(heaing)</script>
         </h3>
         <div>
-            $(content)
+           <script> $(content)</script>
         </div>
      </div>  
     </body>
