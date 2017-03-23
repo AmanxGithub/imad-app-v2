@@ -2,61 +2,6 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-var articleOne={
-    title:'article-one|AMAN GUPTA',
-    heading:'Article one',
-    date:'april,24',
-    content:`<p>
-                this is article one.this is article one.this is article one.this is article one.
-                this is article one.this is article one.
-                this is article one.this is article one.this is article one.this is article one.
-            </p>`
-    
-};
-
-
-function createtemplet(data)
-{
-var title=data.title;
-var date=data.date;
-var heading=data.heading;
-var content=data.content;
-var htmltemplet=`
-<html>
-     <head>
-        <title>
-              <script>  $(title) </script>
-        </title>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-    <div class="container">
-        <div>
-            <a href="/">HOME</a>
-        </div>
-        <hr/>
-        <div>
-            <script> $(date) </script>
-        </div>
-        <h3>
-           <script> $(heaing)</script>
-        </h3>
-        <div>
-           <script> $(content)</script>
-        </div>
-     </div>  
-    </body>
-</html>`;
-return htmltemplet;
-}
-
-
-
-
-
-
-
-
 
 var app = express();
 app.use(morgan('combined'));
@@ -73,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 app.get('/article-one' , function (req, res) {
-    res.send(createtemplet(articleOne));
+    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
 
 app.get('/article-two' , function (req, res) {
