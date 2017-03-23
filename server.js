@@ -21,7 +21,7 @@ var title=data.title;
 var date=data.date;
 var heading=data.heading;
 var content=data.content;
-var htmptemplate=`
+var htmltemplet=`
 <html>
      <head>
         <title>
@@ -47,7 +47,7 @@ var htmptemplate=`
      </div>  
     </body>
 </html>`;
-return htmptemplet;
+return htmltemplet;
 }
 
 
